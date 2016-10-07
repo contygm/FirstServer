@@ -21,7 +21,7 @@ function handleRequest(req, res){
 
 	// determines function to call based on path
     switch(urlParts.pathname){
-    	case '/home':
+    	case '/':
     		displayHome(urlParts.pathname, req, res);
     		break;
     	case '/favFoods':
