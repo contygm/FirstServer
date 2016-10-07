@@ -6,7 +6,7 @@
 //  * Favorite CSS Frameworks
 // * Use fs to serve the HTML from files rather than straight in the JavaScripts
 
-
+var url = require('url');
 var http = require('http');
 var fs = require('fs');
 
@@ -14,15 +14,6 @@ var fs = require('fs');
 var PORT = 7263;
 
 var server = http.createServer(handleRequest);
-
-function handleRequest(req, res){
-
-    fs.readFile("home.html", function(err, data){
-      res.writeHead(404, {'Content-Type': 'text/html'});
-      res.end(data);
-    });
-
-};
 
 function handleRequest(req, res){
     // res.end('It Works!! Path Hit: ' + req.url);
